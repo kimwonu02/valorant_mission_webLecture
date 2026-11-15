@@ -7,7 +7,18 @@
 
 /* 페이지 배경 */
 body {
-    background-color: #111111;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("../images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     color: white;
     font-family: Arial, sans-serif;
 }
@@ -69,5 +80,27 @@ button {
     border: none;
     border-radius: 5px;
     font-size: 18px;
+    cursor: pointer;
+}
+
+.difficulty-select {
+    margin-top: 30px;
+}
+
+/* 난이도 선택 제목 */
+.difficulty-select label {
+    margin-right: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+/* 난이도 선택 메뉴 */
+.difficulty-select select {
+    padding: 10px 20px;
+    background-color: #222222;
+    color: white;
+    border: 1px solid #ff4655;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
 }
