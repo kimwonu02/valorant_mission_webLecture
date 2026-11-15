@@ -114,4 +114,6 @@ function randomPick() {
     document.getElementById("mission-result").textContent = randomMission;
     document.getElementById("agent-result").textContent = randomAgent;
     document.getElementById("weapon-result").textContent = randomWeapon;
+
+    
 }

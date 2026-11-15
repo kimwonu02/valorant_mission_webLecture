@@ -4,15 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VALORANT RANDOM PICK WEB</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <h1>
+    <div class="container">
+        <h1>
         VALORANT RANDOM PICK
-    </h1>
+        </h1>
 
-    <p>
-        오늘의 미션에 도전해 보자!
-    </p>
+        <p>
+        게임은 즐기려고 하는 것이다!
+        </p>
+
+        <div class="difficulty-select">
+            <label for="difficulty">미션 난이도</label>
+            
+            <select id="difficulty">
+                <option value="easy">쉬움</option>
+                <option value="normal">보통</option>
+                <option value="hard">어려움</option>
+            </select>
+
+        </div>
+
+        <div class="pick-container">
+            <div class="pick-card">
+            <h2>MISSION</h2>
+            <p id="mission-result">랜덤 미션</p>
+            </div>
+
+            <div class="pick-card">
+            <h2>AGENT</h2>
+            <p id="agent-result">랜덤 요원</p>
+            </div>
+
+            <div class="pick-card">
+            <h2>WEAPON</h2>
+            <p id="weapon-result">랜덤 총기</p>
+            </div>
+        </div>
+       
+        <button onclick="randomPick()">랜덤 뽑기</button>
+
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
