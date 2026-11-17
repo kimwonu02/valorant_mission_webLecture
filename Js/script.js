@@ -13,22 +13,22 @@ const missions = {
 
     // 보통 미션
     normal: [
-        "헤드샷 3회 달성하기",
+        "헤드샷 3킬 달성하기",
         "스킬로 적 처치하기",
-        "한 라운드에서 적 2명 처치하기",
-        "권총으로 적 처치하기",
-        "한 라운드 죽지않기",
-        "주운 무기로 적 처치하기"
+        "한 라운드에 3킬 하기",
+        "산탄총으로 적 처치하기",
+        "한 라운드 노 데스 하기",
+        "주운 상대 무기로 적 처치하기"
     ],
 
     // 어려운 미션
     hard: [
-        "한 라운드에서 3킬 이상 달성하기",
-        "체력이 30 이하인 적 처치하기",
-        "마지막 생존자로 라운드 승리하기",
-        "불리한 상황에서 라운드 역전하기",
+        "한 라운드에 4킬 하기",
+        "체력이 30 이하인 적 2명 처치하기",
+        "스킬로 클러치 하기",
+        "불리한 라운드 절약왕하기",
         "한 게임에서 MVP 달성하기",
-        "헤드샷만으로 적 3명 처치하기"
+        "헤드샷 퍼센트 30프로 이상 달성하기"
     ]
 
 };
@@ -90,9 +90,21 @@ const weapons = [
 // 4. 랜덤 뽑기 함수
 function randomPick() {
 
-    // 미션 랜덤 선택
     // 선택한 난이도 가져오기
     const difficulty = document.getElementById("difficulty").value;
+    // 미션 난이도에 따른 제목 변경
+    const missionTitle = document.getElementById("mission-title");
+
+    if(difficulty === "easy"){
+        missionTitle.textContent = "EASY MISSION";
+    }
+    else if(difficulty === "normal"){
+        missionTitle.textContent = "NORMAL MISSION";
+    }
+    else if(difficulty === "hard"){
+        missionTitle.textContent = "HARD MISSION";
+    }
+
     // 선택한 난이도의 미션 목록 가져오기
     const missionList = missions[difficulty];
     // 미션 랜덤 선택
