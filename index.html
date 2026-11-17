@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +29,7 @@
 
         <div class="pick-container">
             <div class="pick-card">
-            <h2>MISSION</h2>
+            <h2 id="mission-title">MISSION</h2>
             <p id="mission-result">랜덤 미션</p>
             </div>
 
@@ -47,6 +47,16 @@
         <div class="button-container">
             <button onclick="randomPick()">랜덤 뽑기</button>
             <button onclick="resetPick()">초기화</button>
+        </div>
+
+        <div class="history-container">
+            
+            <h2>PICK HISTORY</h2>
+
+            <div id="history-list">
+                <p>아직 기록이 없습니다!</p>
+            </div>
+
         </div>
 
     </div>

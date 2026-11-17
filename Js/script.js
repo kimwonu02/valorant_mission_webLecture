@@ -1,3 +1,4 @@
+const pickHistory = []
 // 1. 랜덤 미션 목록
 const missions = {
 
@@ -122,6 +123,14 @@ function randomPick() {
         Math.floor(Math.random() * weapons.length)
     ];
 
+    pickHistory.unshift({
+        mission:randomMission,
+        agent:randomAgent,
+        weapon:randomWeapon
+    })
+
+    displayHistory();
+
     // HTML 화면에 결과 출력
     document.getElementById("mission-result").textContent = randomMission;
     document.getElementById("agent-result").textContent = randomAgent;
@@ -135,4 +144,25 @@ function resetPick(){
     document.getElementById("mission-result").textContent = "랜덤 미션";
     document.getElementById("agent-result").textContent = "랜덤 요원";
     document.getElementById("weapon-result").textContent = "랜덤 총기";
+}
+
+function displayHistory(){
+
+    const historyList = document.getElementById("history-list");
+
+    historyList.innerHTML = "";
+
+    pickHistory.forEach((pick, index) => {
+
+        const historyItem = document.createElement("div");
+
+        historyItem.innerHTML = `
+            <h3>PICK #${pickHistory.length - index}</h3>
+            <p>MISSION:${pick.mission}</p>
+            <p>AGENT: ${pick.agent}</p>
+            <p>WEAPON: ${pick.weapon}</p>
+        `;
+
+        historyList.appendChild(historyItem);
+    });
 }
