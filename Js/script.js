@@ -117,3 +117,10 @@ function randomPick() {
 
     
 }
+
+// 리셋 버튼 기능
+function resetPick(){
+    document.getElementById("mission-result").textContent = "랜덤 미션";
+    document.getElementById("agent-result").textContent = "랜덤 요원";
+    document.getElementById("weapon-result").textContent = "랜덤 총기";
+}
